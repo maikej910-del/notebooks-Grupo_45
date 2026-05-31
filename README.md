@@ -38,7 +38,7 @@ Desenvolver um sistema inteligente e de alta performance capaz de:
 A solução foi arquitetada utilizando práticas sólidas de Engenharia de Dados e Ciência de Dados, dividida em duas camadas principais:
 
 ### 1️⃣ Camada de Machine Learning (Modelagem)
-- **Seleção de Features Estratégica:** Remoção intencional das variáveis brutas de "Peso" e "Altura" do conjunto de treino. Esta abordagem elimina o viés de multicolinearidade e força o algoritmo a avaliar o quadro clínico cruzando a proporção corporal (`IMC`) com as rotinas comportamentais do paciente.
+- **Seleção de Features Estratégica:** Remoção intencional das variáveis brutas de "Peso" e "IMC" do conjunto de treino. Esta abordagem elimina o viés de multicolinearidade e força o algoritmo a avaliar o quadro clínico somente a partir das rotinas comportamentais do paciente ou seu historico familiar.
 - **Pipeline de Transformação:** Utilização de `ColumnTransformer` associado ao `RobustScaler` (para tratar dados numéricos com maior tolerância a discrepâncias) e `OneHotEncoder` (binarização categórica), mitigando completamente o risco de *Data Leakage*.
 - **Algoritmo Preditivo:** Implementação de um modelo ensemble `RandomForestClassifier` com pesos balanceados (`class_weight='balanced'`) e restrições de profundidade para evitar o sobreajuste (overfitting).
 - **Alta Performance:** O modelo calibrado atingiu uma **acurácia global de 94.64%** nos dados de validação.
@@ -50,7 +50,7 @@ A solução foi arquitetada utilizando práticas sólidas de Engenharia de Dados
 - **Entrada Nominativa:** Inclusão de campo para identificação do paciente, permitindo centralizar a consulta.
 - **Interface Segura (Campos Vazios):** Todos os seletores e campos numéricos iniciam completamente limpos (`None` / `""`). Isso elimina valores padrões na tela e obriga o profissional de saúde a preencher cada informação de forma consciente, evitando diagnósticos acidentais.
 - **Mapeamento Reverso no Backend:** Implementação de um dicionário de conversão oculto no código. O usuário seleciona opções textuais intuitivas na tela (ex: "Sempre", "Raramente"), e o sistema traduz automaticamente para os códigos numéricos exatos que o modelo exige.
-- **Cálculo de Índices em Tempo Real:** Processamento automático das entradas com injeção instantânea do cálculo do IMC e do cálculo cruzado de score de atividade física.
+- **Cálculo de Índices em Tempo Real:** Processamento automático das entradas com injeção instantânea do cálculo do IMC e do cálculo cruzado de score de atividade física, somente informativo ao paciente. O intuito mesmo da aplicação é apresentar que as rotinas comportamentais do paciente ou seu historico familiar influciam e aumentam a probabilidade nas categorias de peso.
 - **Exportação de Relatórios:** Geração automatizada de relatórios em formato Excel (`.xlsx`) contendo os dados coletados do paciente e o respectivo diagnóstico clínico, facilitando o arquivamento ou a impressão dos resultados.
 
 ---

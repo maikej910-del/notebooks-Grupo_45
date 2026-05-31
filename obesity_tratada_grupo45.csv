@@ -1,4 +1,4 @@
-﻿Genero;Idade;Altura;Peso;Historico_Familiar;Consumo_Alta_Caloria;Consumo_Vegetais;Refeicoes_Dia;Consumo_Entre_Refeicoes;Fumante;Consumo_Agua;Monitora_Calorias;Frequencia_Ativ_Fisica;Tempo_Exercicio;Consumo_Alcool;Meio_Transporte;Classe_Peso;IMC;Score_Atividade;Faixa_Etaria
+﻿Genero;Idade;Altura;Peso;Historico_Familiar;Consumo_Alta_Caloria;Consumo_Vegetais;Refeicoes_Dia;Consumo_Entre_Refeicoes;Fumante;Consumo_Agua;Monitora_Calorias;Frequencia_Ativ_Fisica;Tempo_Telas;Consumo_Alcool;Meio_Transporte;Classe_Peso;IMC;Score_Atividade;Faixa_Etaria
 Feminino;21,0;1,62;64,0;Sim;Nao;As vezes;3 refeicoes;As vezes;Nao;1-2 L/dia;Nao;Nenhuma;3-5 h/dia;Nao;Transporte Publico;Peso normal;24,39;0,0;Jovem Adulto
 Feminino;21,0;1,52;56,0;Sim;Nao;Sempre;3 refeicoes;As vezes;Sim;> 2 L/dia;Sim;5+ dias/sem;0-2 h/dia;As vezes;Transporte Publico;Peso normal;24,24;0,0;Jovem Adulto
 Masculino;23,0;1,8;77,0;Sim;Nao;As vezes;3 refeicoes;As vezes;Nao;1-2 L/dia;Nao;3-4 dias/sem;3-5 h/dia;Frequentemente;Transporte Publico;Peso normal;23,77;2,0;Jovem Adulto

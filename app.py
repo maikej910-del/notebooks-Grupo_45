@@ -59,7 +59,7 @@ if st.button("Gerar Diagnóstico"):
 
         # Envio dos dados SEM Peso, Altura e IMC para o modelo, focando apenas nos hábitos
         dados = pd.DataFrame([{
-            'Genero': genero, 'Idade': float(idade), 'Historico_Familiar': familia,
+            'Genero': genero, 'Idade': float(idade), 'Altura': float(altura), 'Historico_Familiar': familia,
             'Consumo_Alta_Caloria': calorico, 'Consumo_Vegetais': veg_map.get(vegetais, 2),
             'Refeicoes_Dia': ref_map.get(refeicoes, 3), 'Consumo_Entre_Refeicoes': lanches,
             'Fumante': fumante, 'Consumo_Agua': h2o_map.get(agua, 2),
